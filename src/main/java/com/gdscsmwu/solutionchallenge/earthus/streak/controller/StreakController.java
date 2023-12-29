@@ -17,7 +17,7 @@ import java.util.List;
 public class StreakController {
 
     private final StreakService streakService;
-    private final StreakRepository streakRepository;
+//    private final StreakRepository streakRepository;
 
     @GetMapping("/{userNickname}")
     public List<StreakListResponseDto> getStreakList(@PathVariable String userNickname) {

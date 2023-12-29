@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 // - 기본 생성자 자동 추가
 // - public Posts() {} 와 같은 효과
-@Entity
+@Entity(name = "streak")
 public class Streak {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,7 @@ public class Streak {
     //@ManyToOne
     //@JoinColumn(name = "userNickname")
     //@Column(nullable = false, unique = true)
-    //@Column(name = "userNickname")
-    @Column
+    @Column(name = "userNickname")
     @ColumnDefault("'hello'")
     private String userNickname;
 
@@ -32,7 +31,7 @@ public class Streak {
     //private LocalDateTime streakDate = LocalDateTime.now();
     private LocalDateTime streakDate;
 
-    @Column
+    @Column(name = "streak")
     @ColumnDefault("0")
     private int streak;
 }
